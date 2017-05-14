@@ -29,6 +29,7 @@ import id.sch.smktelkom_mlg.privateassignment.xirpl520.mismoviefragment.service.
  * A simple {@link Fragment} subclass.
  */
 public class ComingSoonFragment extends Fragment {
+
     ArrayList<Result> coming_mList = new ArrayList<>();
     ComingSoonAdapter coming_mAdapter;
 

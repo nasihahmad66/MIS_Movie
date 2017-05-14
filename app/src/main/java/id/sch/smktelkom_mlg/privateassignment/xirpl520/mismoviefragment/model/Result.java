@@ -14,8 +14,8 @@ public class Result {
     public String original_language;
     public String title;
     public String backdrop_path;
-    public float popularity;
-    public int vote_count;
+    public String popularity;
+    public String vote_count;
     public boolean video;
-    public Double vote_average;
+    public String vote_average;
 }

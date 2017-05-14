@@ -60,7 +60,7 @@ public class TopRatedAdapter extends RecyclerView.Adapter<TopRatedAdapter.ViewHo
     }
 
     public interface ITopRatedAdapter {
-        void showTopRated(int id, String poster_path, String title, String overview, Double vote_average, String release_date);
+        void showTopRated(String poster_path, String title, String overview, String vote_average, String release_date, String backdrop_path, String vote_count, String popularity, String original_language);
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder {
@@ -80,8 +80,8 @@ public class TopRatedAdapter extends RecyclerView.Adapter<TopRatedAdapter.ViewHo
             itemView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    Result toprated = list.get(getAdapterPosition());
-                    mITopRatedAdapter.showTopRated(toprated.id, toprated.poster_path, toprated.title, toprated.overview, toprated.vote_average, toprated.release_date);
+                    Result result = list.get(getAdapterPosition());
+                    mITopRatedAdapter.showTopRated(result.poster_path, result.title, result.overview, result.vote_average, result.release_date, result.backdrop_path, result.vote_count, result.popularity, result.original_language);
                 }
             });
         }

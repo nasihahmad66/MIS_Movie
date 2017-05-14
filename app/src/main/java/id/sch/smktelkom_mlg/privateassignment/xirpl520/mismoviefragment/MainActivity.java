@@ -1,5 +1,6 @@
 package id.sch.smktelkom_mlg.privateassignment.xirpl520.mismoviefragment;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
@@ -23,6 +24,17 @@ import id.sch.smktelkom_mlg.privateassignment.xirpl520.mismoviefragment.fragment
 import id.sch.smktelkom_mlg.privateassignment.xirpl520.mismoviefragment.fragment.TopRatedFragment;
 
 public class MainActivity extends AppCompatActivity implements ComingSoonAdapter.IComingSoonAdapter, TopRatedAdapter.ITopRatedAdapter, NowPlayingAdapter.INowPlayingAdapter {
+
+    public static final String RESULTTITLE = "resultTitle";
+    public static final String RESULTOVERVIEW = "resultOverview";
+    public static final String RESULTBACKDROP = "resultBackdrop";
+    public static final String RESULTPOSTER = "resultPoster";
+    public static final String RESULTRELEASE = "resultRelease";
+    public static final String RESULTAVERAGE = "resultAverage";
+    public static final String RESULTCOUNT = "resultCount";
+    public static final String RESULTPOPULARITY = "resultPopuarity";
+    public static final String RESULTLANGUAGE = "resultLanguage";
+
 
     private TabLayout tabLayout;
     private int[] tabIcons = {
@@ -106,18 +118,51 @@ public class MainActivity extends AppCompatActivity implements ComingSoonAdapter
     }
 
     @Override
-    public void showTopRated(int id, String poster_path, String title, String overview, Double vote_average, String release_date) {
+    public void showTopRated(String poster_path, String title, String overview, String vote_average, String release_date, String backdrop_path, String vote_count, String popularity, String original_language) {
+        Intent intent = new Intent(this, DetailActivity.class);
+        intent.putExtra(RESULTTITLE, title);
+        intent.putExtra(RESULTOVERVIEW, overview);
+        intent.putExtra(RESULTBACKDROP, backdrop_path);
+        intent.putExtra(RESULTPOSTER, poster_path);
+        intent.putExtra(RESULTRELEASE, release_date);
+        intent.putExtra(RESULTAVERAGE, vote_average);
+        intent.putExtra(RESULTCOUNT, vote_count);
+        intent.putExtra(RESULTPOPULARITY, popularity);
+        intent.putExtra(RESULTLANGUAGE, original_language);
 
+        startActivity(intent);
     }
 
     @Override
-    public void showNowPlaying(int id, String poster_path, String title, String overview, Double vote_average, String release_date) {
+    public void showNowPlaying(String poster_path, String title, String overview, String vote_average, String release_date, String backdrop_path, String vote_count, String popularity, String original_language) {
+        Intent intent = new Intent(this, DetailActivity.class);
+        intent.putExtra(RESULTTITLE, title);
+        intent.putExtra(RESULTOVERVIEW, overview);
+        intent.putExtra(RESULTBACKDROP, backdrop_path);
+        intent.putExtra(RESULTPOSTER, poster_path);
+        intent.putExtra(RESULTRELEASE, release_date);
+        intent.putExtra(RESULTAVERAGE, vote_average);
+        intent.putExtra(RESULTCOUNT, vote_count);
+        intent.putExtra(RESULTPOPULARITY, popularity);
+        intent.putExtra(RESULTLANGUAGE, original_language);
 
+        startActivity(intent);
     }
 
     @Override
-    public void showComingSoon(int id, String poster_path, String title, String overview, Double vote_average, String release_date) {
+    public void showComingSoon(String poster_path, String title, String overview, String vote_average, String release_date, String backdrop_path, String vote_count, String popularity, String original_language) {
+        Intent intent = new Intent(this, DetailActivity.class);
+        intent.putExtra(RESULTTITLE, title);
+        intent.putExtra(RESULTOVERVIEW, overview);
+        intent.putExtra(RESULTBACKDROP, backdrop_path);
+        intent.putExtra(RESULTPOSTER, poster_path);
+        intent.putExtra(RESULTRELEASE, release_date);
+        intent.putExtra(RESULTAVERAGE, vote_average);
+        intent.putExtra(RESULTCOUNT, vote_count);
+        intent.putExtra(RESULTPOPULARITY, popularity);
+        intent.putExtra(RESULTLANGUAGE, original_language);
 
+        startActivity(intent);
     }
 
     /**

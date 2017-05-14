@@ -60,7 +60,7 @@ public class NowPlayingAdapter extends RecyclerView.Adapter<NowPlayingAdapter.Vi
     }
 
     public interface INowPlayingAdapter {
-        void showNowPlaying(int id, String poster_path, String title, String overview, Double vote_average, String release_date);
+        void showNowPlaying(String poster_path, String title, String overview, String vote_average, String release_date, String backdrop_path, String vote_count, String popularity, String original_language);
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder {
@@ -81,7 +81,7 @@ public class NowPlayingAdapter extends RecyclerView.Adapter<NowPlayingAdapter.Vi
                 @Override
                 public void onClick(View v) {
                     Result result = list.get(getAdapterPosition());
-                    mINowPlayingAdapter.showNowPlaying(result.id, result.poster_path, result.title, result.overview, result.vote_average, result.release_date);
+                    mINowPlayingAdapter.showNowPlaying(result.poster_path, result.title, result.overview, result.vote_average, result.release_date, result.backdrop_path, result.vote_count, result.popularity, result.original_language);
                 }
             });
         }

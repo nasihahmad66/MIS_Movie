@@ -61,7 +61,7 @@ public class ComingSoonAdapter extends RecyclerView.Adapter<ComingSoonAdapter.Vi
     }
 
     public interface IComingSoonAdapter {
-        void showComingSoon(int id, String poster_path, String title, String overview, Double vote_average, String release_date);
+        void showComingSoon(String poster_path, String title, String overview, String vote_average, String release_date, String backdrop_path, String vote_count, String popularity, String original_language);
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder {
@@ -82,7 +82,7 @@ public class ComingSoonAdapter extends RecyclerView.Adapter<ComingSoonAdapter.Vi
                 @Override
                 public void onClick(View v) {
                     Result result = list.get(getAdapterPosition());
-                    mIComingSoonAdapter.showComingSoon(result.id, result.poster_path, result.title, result.overview, result.vote_average, result.release_date);
+                    mIComingSoonAdapter.showComingSoon(result.poster_path, result.title, result.overview, result.vote_average, result.release_date, result.backdrop_path, result.vote_count, result.popularity, result.original_language);
                 }
             });
         }
