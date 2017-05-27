@@ -1,8 +1,8 @@
-### Nama Aplikasi
-MIS Movie
+### MIS Movie
+<img src="https://cloud.githubusercontent.com/assets/21413338/26519554/67ebc78a-42ed-11e7-8f49-05586ba2469d.png" width="200" height="200" />
 
 ### Download
-[Download Aplikasi](https://drive.google.com/file/d/0B36Y2xO8CvzlLUFGczF3ZXVuaVk/view?usp=sharing)
+[Download Aplikasi](https://drive.google.com/file/d/0B36Y2xO8CvzlYzd0aVJpTDA4cFE/view?usp=sharing)
 
 ### Identitas Siswa :
 * Nama          : Muhamad Iqbal Samudra
@@ -22,6 +22,7 @@ MIS Movie
 - Tabbed Navigation
 
 ### Library dari Local Database yang digunakan pada Aplikasi
+- SugarORM
 
 ### Deskripsi singkat dari aplikasi
 - Memudahkan kita untuk mencari referensi film
@@ -30,17 +31,24 @@ MIS Movie
 - Dapat mengetahui film yang akan release
 
 ### Kelebihan dari Aplikasi
-- Tampilan aplikasi cukup simple dan mudah digunakan
+- Menampilkan data film yang sedang tayang di bioskop saat ini
+- Menampilkan data film yang ratingnya paling bagus saat ini
+- Menampilkan data film yang akan rilis pada waktu dekat
+- Ada fitur favorit, dimana data akan disimpan offline jika user menekan ikon love tersebut
+- User friendly dengan tampilan yang mudah digunakan
+
+### Kelebihan dari Aplikasi
+- Intro/Guide Aplikasi - 'com.github.deano2390:MaterialShowcaseView:1.1.0'
 
 ### Screenshot Aplikasi
 Now Playing | Top Rated
 ------------ | -------------
-<img src="https://cloud.githubusercontent.com/assets/21413338/26036329/ef6397d4-3905-11e7-9158-a36bb23ad392.png" width="300" height="515" />|<img src="https://cloud.githubusercontent.com/assets/21413338/26036330/ef6414e8-3905-11e7-9487-2e1c91ed0d67.png" width="300" height="515" />
+<img src="https://cloud.githubusercontent.com/assets/21413338/26519791/8e74bb5c-42f0-11e7-94ef-a8315b10e929.png" width="300" height="515" />|<img src="https://cloud.githubusercontent.com/assets/21413338/26519789/8e71c0e6-42f0-11e7-88b6-fbeaaf4b46e2.png" width="300" height="515" />
 
 Coming Soon | Detail
 ------------ | -------------
-<img src="https://cloud.githubusercontent.com/assets/21413338/26036333/ef785f5c-3905-11e7-9dc5-6cc8a9134b67.png" width="300" height="515" />|<img src="https://cloud.githubusercontent.com/assets/21413338/26036331/ef6746ae-3905-11e7-8f3d-7a58e55e0c38.png" width="300" height="515" />
+<img src="https://cloud.githubusercontent.com/assets/21413338/26519790/8e728dbe-42f0-11e7-932d-24bfe176ca4e.png" width="300" height="515" />|<img src="https://cloud.githubusercontent.com/assets/21413338/26519786/8e5f27e2-42f0-11e7-9a5a-e5397b84fb71.png" width="300" height="515" />
 
-Snackbar | Title
+Your Favorite | Guide
 ------------ | -------------
-<img src="https://cloud.githubusercontent.com/assets/21413338/26036332/ef7825b4-3905-11e7-81d1-d932fb2a31be.png" width="300" height="515" />|<img src="https://cloud.githubusercontent.com/assets/21413338/26036334/ef790d76-3905-11e7-8579-10501832e7f6.png" width="300" height="515" />
+<img src="https://cloud.githubusercontent.com/assets/21413338/26519787/8e5f9e02-42f0-11e7-9458-20914cf0f1fd.png" width="300" height="515" />|<img src="https://cloud.githubusercontent.com/assets/21413338/26519788/8e6fea78-42f0-11e7-88f8-ee763873198b.png" width="300" height="515" />
