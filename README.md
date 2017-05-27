@@ -37,7 +37,7 @@
 - Ada fitur favorit, dimana data akan disimpan offline jika user menekan ikon love tersebut
 - User friendly dengan tampilan yang mudah digunakan
 
-### Kelebihan dari Aplikasi
+### Library Lain
 - Intro/Guide Aplikasi - 'com.github.deano2390:MaterialShowcaseView:1.1.0'
 
 ### Screenshot Aplikasi
