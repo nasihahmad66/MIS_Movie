@@ -10,8 +10,6 @@ import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.LayoutInflater;
-import android.view.Menu;
-import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
@@ -22,6 +20,7 @@ import id.sch.smktelkom_mlg.privateassignment.xirpl520.mismoviefragment.adapter.
 import id.sch.smktelkom_mlg.privateassignment.xirpl520.mismoviefragment.fragment.ComingSoonFragment;
 import id.sch.smktelkom_mlg.privateassignment.xirpl520.mismoviefragment.fragment.NowPlayingFragment;
 import id.sch.smktelkom_mlg.privateassignment.xirpl520.mismoviefragment.fragment.TopRatedFragment;
+import id.sch.smktelkom_mlg.privateassignment.xirpl520.mismoviefragment.sugar.FavoriteFragment;
 
 public class MainActivity extends AppCompatActivity implements ComingSoonAdapter.IComingSoonAdapter, TopRatedAdapter.ITopRatedAdapter, NowPlayingAdapter.INowPlayingAdapter {
 
@@ -40,7 +39,8 @@ public class MainActivity extends AppCompatActivity implements ComingSoonAdapter
     private int[] tabIcons = {
             R.drawable.ic_play_circle_filled_black_48px,
             R.drawable.ic_favorite_black_48px,
-            R.drawable.ic_rotate_right_black_48px
+            R.drawable.ic_rotate_right_black_48px,
+            R.drawable.ic_stars_black_24dp
     };
 
     /**
@@ -86,35 +86,18 @@ public class MainActivity extends AppCompatActivity implements ComingSoonAdapter
 
         TextView tabTwo = (TextView) LayoutInflater.from(this).inflate(R.layout.custom_tab, null);
         tabTwo.setText("TOP RATED");
-        tabTwo.setCompoundDrawablesWithIntrinsicBounds(0, R.drawable.ic_favorite_black_48px, 0, 0);
+        tabTwo.setCompoundDrawablesWithIntrinsicBounds(0, R.drawable.ic_stars_black_24dp, 0, 0);
         tabLayout.getTabAt(1).setCustomView(tabTwo);
 
         TextView tabThree = (TextView) LayoutInflater.from(this).inflate(R.layout.custom_tab, null);
         tabThree.setText("COMING SOON");
         tabThree.setCompoundDrawablesWithIntrinsicBounds(0, R.drawable.ic_rotate_right_black_48px, 0, 0);
         tabLayout.getTabAt(2).setCustomView(tabThree);
-    }
 
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_main, menu);
-        return true;
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
-        int id = item.getItemId();
-
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.action_about) {
-            return true;
-        }
-
-        return super.onOptionsItemSelected(item);
+        TextView tabFour = (TextView) LayoutInflater.from(this).inflate(R.layout.custom_tab, null);
+        tabFour.setText("YOUR FAVORITE");
+        tabFour.setCompoundDrawablesWithIntrinsicBounds(0, R.drawable.ic_favorite_black_48px, 0, 0);
+        tabLayout.getTabAt(3).setCustomView(tabFour);
     }
 
     @Override
@@ -218,6 +201,8 @@ public class MainActivity extends AppCompatActivity implements ComingSoonAdapter
                 return new TopRatedFragment();
             else if (position == 2)
                 return new ComingSoonFragment();
+            else if (position == 3)
+                return new FavoriteFragment();
             else
                 return PlaceholderFragment.newInstance(position + 1);
         }
@@ -225,7 +210,7 @@ public class MainActivity extends AppCompatActivity implements ComingSoonAdapter
         @Override
         public int getCount() {
             // Show 3 total pages.
-            return 3;
+            return 4;
         }
     }
 }

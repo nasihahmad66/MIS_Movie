@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:card_view="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:card_view="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content">
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
 
     <android.support.v7.widget.CardView
         android:layout_width="match_parent"
@@ -19,11 +19,11 @@
             android:orientation="horizontal">
 
             <ImageView
-                android:id="@+id/top_imageViewPoster"
-                android:layout_width="100dp"
-                android:layout_height="130dp"
+                android:id="@+id/imageViewPoster"
+                android:layout_width="115dp"
+                android:layout_height="150dp"
                 android:background="?attr/selectableItemBackgroundBorderless"
-                android:clickable="false"
+                android:clickable="true"
                 android:scaleType="fitXY" />
 
             <LinearLayout
@@ -35,7 +35,7 @@
                 android:paddingRight="5dp">
 
                 <TextView
-                    android:id="@+id/top_textViewTitle"
+                    android:id="@+id/textViewJudul"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_alignParentTop="true"
@@ -45,7 +45,7 @@
                     android:textSize="@dimen/album_title" />
 
                 <TextView
-                    android:id="@+id/top_textViewDate"
+                    android:id="@+id/textViewRelease"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:paddingLeft="@dimen/album_title_padding"
@@ -53,10 +53,10 @@
                     android:textSize="14dp" />
 
                 <TextView
-                    android:id="@+id/top_textViewOverview"
+                    android:id="@+id/textViewDesc"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_below="@id/top_textViewTitle"
+                    android:layout_below="@id/textViewJudul"
                     android:maxLines="3"
                     android:paddingBottom="@dimen/songs_count_padding_bottom"
                     android:paddingLeft="@dimen/album_title_padding"
@@ -68,19 +68,13 @@
                     android:layout_height="wrap_content"
                     android:orientation="horizontal">
 
-                    <ImageView
-                        android:id="@+id/top_rating_image"
-                        android:layout_width="15dp"
-                        android:layout_height="15dp"
-                        android:src="@drawable/star"
-                        android:tint="@color/colorBintang" />
-
-                    <TextView
-                        android:id="@+id/top_textViewRating"
+                    <Button
+                        android:id="@+id/buttonDelete"
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="8dp"
-                        tools:text="5.0" />
+                        android:layout_height="40dp"
+                        android:layout_gravity="center_horizontal|right"
+                        android:text="Delete" />
+
                 </LinearLayout>
 
             </LinearLayout>
@@ -90,4 +84,3 @@
     </android.support.v7.widget.CardView>
 
 </LinearLayout>
-

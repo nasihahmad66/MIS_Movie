@@ -73,7 +73,7 @@ public class NowPlayingAdapter extends RecyclerView.Adapter<NowPlayingAdapter.Vi
         public ViewHolder(View itemView) {
             super(itemView);
             now_ivPoster = (ImageView) itemView.findViewById(R.id.now_imageViewPoster);
-            now_tvTitle = (TextView) itemView.findViewById(R.id.now_textViewTitle);
+            now_tvTitle = (TextView) itemView.findViewById(R.id.textViewJudul);
             now_tvOverview = (TextView) itemView.findViewById(R.id.now_textViewOverview);
             now_tvRating = (TextView) itemView.findViewById(R.id.now_textViewRating);
             now_tvDate = (TextView) itemView.findViewById(R.id.now_textViewDate);
